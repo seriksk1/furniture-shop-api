@@ -1,7 +1,8 @@
-import { AchievementsModule } from "./achievements/achievements.module";
+import { OrdersModule } from "./orders/orders.module";
+import { MessagesModule } from "./messages/messages.module";
+import { CategoriesModule } from "./categories/categories.module";
+import { ProductsModule } from "./products/products.module";
 import * as path from "path";
-import { EventsModule } from "./events/events.module";
-import { GoalsModule } from "./goals/goals.module";
 import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
 import { SequelizeModule } from "@nestjs/sequelize";
@@ -13,15 +14,13 @@ import { RolesModule } from "./roles/roles.module";
 import { User } from "./users/users.model";
 import { Role } from "./roles/roles.model";
 import { UserRoles } from "./roles/user-roles.model";
-import { Achievement } from "./achievements/achievements.model";
-import { Event } from "./events/events.model";
-import { Goal } from "./goals/goals.model";
 
 @Module({
   imports: [
-    AchievementsModule,
-    EventsModule,
-    GoalsModule,
+    OrdersModule,
+    MessagesModule,
+    CategoriesModule,
+    ProductsModule,
     FilesModule,
     AuthModule,
     RolesModule,
@@ -37,7 +36,7 @@ import { Goal } from "./goals/goals.model";
       username: process.env.POSTGRES_USER,
       password: process.env.POSTGRES_PASSWORD,
       database: process.env.POSTGRES_DB,
-      models: [User, Role, UserRoles, Achievement, Event, Goal],
+      models: [User, Role, UserRoles],
       autoLoadModels: true,
     }),
   ],
