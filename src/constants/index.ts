@@ -15,16 +15,16 @@ export const endpoints = {
     register: "/registration",
   },
   posts: {
-    main: "/posts",
+    main: "/products",
   },
-  achievements: {
-    main: "/achievements",
+  orders: {
+    main: "/orders",
   },
-  events: {
-    main: "/events",
+  categories: {
+    main: "/categories",
   },
-  goals: {
-    main: "/goals",
+  messages: {
+    main: "/messages",
   },
 };
 
