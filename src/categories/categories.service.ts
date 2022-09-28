@@ -8,4 +8,11 @@ export class CategoriesService {
     @InjectModel(Category)
     private categoryRepository: typeof Category
   ) {}
+
+  async getAllCategories() {
+    const categories = await this.categoryRepository.findAll({
+      include: { all: true },
+    });
+    return categories;
+  }
 }

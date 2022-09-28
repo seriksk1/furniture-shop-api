@@ -21,14 +21,14 @@ import { Message } from "./messages/messages.model";
 
 @Module({
   imports: [
-    OrdersModule,
-    MessagesModule,
-    CategoriesModule,
-    ProductsModule,
     FilesModule,
     AuthModule,
     RolesModule,
     UsersModule,
+    ProductsModule,
+    CategoriesModule,
+    MessagesModule,
+    OrdersModule,
     ConfigModule.forRoot({ envFilePath: `.${process.env.NODE_ENV}.env` }),
     ServeStaticModule.forRoot({
       rootPath: path.resolve(__dirname, "static"),

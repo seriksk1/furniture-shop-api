@@ -8,4 +8,11 @@ export class ProductsService {
     @InjectModel(Product)
     private productRepository: typeof Product
   ) {}
+
+  async getAllProducts() {
+    const products = await this.productRepository.findAll({
+      include: { all: true },
+    });
+    return products;
+  }
 }

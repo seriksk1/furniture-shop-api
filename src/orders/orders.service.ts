@@ -8,4 +8,12 @@ export class OrdersService {
     @InjectModel(Order)
     private orderRepository: typeof Order
   ) {}
+
+  async getAllOrders() {
+    const orders = await this.orderRepository.findAll({
+      include: { all: true },
+    });
+
+    return orders;
+  }
 }
