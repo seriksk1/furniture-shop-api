@@ -17,6 +17,16 @@ export class Message extends Model<Message, MessageCreationAttrs> {
   })
   id: number;
 
+  @ApiProperty({
+    example: "1",
+    description: "Author id",
+  })
+  @Column({
+    type: DataType.INTEGER,
+    allowNull: false,
+  })
+  author: number;
+
   @ApiProperty({ example: "Good product!", description: "Message text" })
   @Column({
     type: DataType.STRING,

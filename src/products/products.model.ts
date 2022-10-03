@@ -5,6 +5,7 @@ interface ProductCreationAttrs {
   name: string;
   description: string;
   price: number;
+  image?: string;
 }
 
 @Table({ tableName: "products" })

@@ -2,7 +2,8 @@ import { ApiProperty } from "@nestjs/swagger";
 import { Column, DataType, Model, Table } from "sequelize-typescript";
 
 interface OrderCreationAttrs {
-  name: string;
+  productId: number;
+  amount: number;
   totalPrice: number;
 }
 

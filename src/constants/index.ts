@@ -7,24 +7,28 @@ export const endpoints = {
   },
   roles: {
     main: "/roles",
-    get: "/:value",
+    value: "/:value",
   },
   auth: {
     main: "/auth",
     login: "/login",
     register: "/registration",
   },
-  posts: {
+  products: {
     main: "/products",
+    id: "/:id",
   },
   orders: {
     main: "/orders",
+    id: "/:id",
   },
   categories: {
     main: "/categories",
+    id: "/:id",
   },
   messages: {
     main: "/messages",
+    id: "/:id",
   },
 };
 
